@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -40,6 +41,21 @@
       </div>
       <div class="col-md-3 d-grid">
         <button onclick="ajouterProduit()" class="btn btn-success">Ajouter</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card p-3 shadow-sm mb-4">
+    <h5>💰 Vente au comptoir</h5>
+    <div class="row g-2">
+      <div class="col-md-6">
+        <select id="produitVente" class="form-select"></select>
+      </div>
+      <div class="col-md-3">
+        <input type="number" id="quantiteVente" class="form-control" placeholder="Quantité vendue" />
+      </div>
+      <div class="col-md-3 d-grid">
+        <button onclick="vendreProduit()" class="btn btn-danger">Vendre</button>
       </div>
     </div>
   </div>
@@ -106,6 +122,36 @@
 
     document.getElementById('totalProduits').innerText = totalProduits;
     document.getElementById('totalQuantite').innerText = totalQuantite;
+    remplirListeProduits();
+  }
+
+  function remplirListeProduits() {
+    const select = document.getElementById("produitVente");
+    if (!select) return;
+    select.innerHTML = "";
+    stock.forEach((item, index) => {
+      const option = document.createElement("option");
+      option.value = index;
+      option.text = item.nom;
+      select.appendChild(option);
+    });
+  }
+
+  function vendreProduit() {
+    const index = document.getElementById("produitVente").value;
+    const qte = parseInt(document.getElementById("quantiteVente").value);
+    if (stock[index] && qte > 0) {
+      if (stock[index].quantite >= qte) {
+        stock[index].quantite -= qte;
+        enregistrerStock();
+        afficherStock();
+        document.getElementById("quantiteVente").value = "";
+      } else {
+        alert("Stock insuffisant !");
+      }
+    } else {
+      alert("Sélection ou quantité invalide.");
+    }
   }
 
   function ajouterProduit() {
@@ -141,9 +187,9 @@
   }
 
   function exportCSV() {
-    let csv = "Nom,Quantité\\n";
+    let csv = "Nom,Quantité\n";
     stock.forEach(item => {
-      csv += `${item.nom},${item.quantite}\\n`;
+      csv += `${item.nom},${item.quantite}\n`;
     });
     const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
