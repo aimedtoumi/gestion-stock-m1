@@ -1,6 +1,6 @@
 
 {
-  "name": "Application de Gestion de Stock",
+  "name": "Gestion de Stock",
   "short_name": "Stock",
   "start_url": "index.html",
   "display": "standalone",
