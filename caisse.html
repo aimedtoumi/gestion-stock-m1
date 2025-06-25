@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Caisse</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">🏠 Accueil</a>
+    <a href="stock.html">📦 Stock</a>
+    <a href="caisse.html" class="active">💰 Caisse</a>
+    <a href="stats.html">📊 Stats</a>
+    <a href="login.html">🔒 Quitter</a>
+  </nav>
+  <main>
+    <h2>💰 Vente au comptoir</h2>
+    <select id="produitVente"></select>
+    <input type="number" id="quantiteVente" placeholder="Quantité">
+    <button onclick="vendreProduit()">Vendre</button>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/caisse.js"></script>
+</body>
+</html>

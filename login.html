@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h2>🔒 Connexion</h2>
+    <input type="password" id="motdepasse" placeholder="Mot de passe">
+    <button onclick="login()">Se connecter</button>
+  </main>
+  <script>
+    function login() {
+      if (document.getElementById('motdepasse').value === 'Admin1234') {
+        window.location.href = 'index.html';
+      } else {
+        alert('Mot de passe incorrect');
+      }
+    }
+  </script>
+</body>
+</html>
