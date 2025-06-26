@@ -21,10 +21,23 @@
 <div class="form">
   <input type="text" id="nom" placeholder="Nom du produit">
   <input type="number" id="quantite" placeholder="Quantité">
-  <input type="number" id="prix" placeholder="Prix (DA)">
+  <input type="number" id="prixAchat" placeholder="Prix d'achat (DA)">
+  <input type="number" id="prix" placeholder="Prix de vente (DA)">
   <button onclick="ajouterProduit()">Ajouter Produit</button>
 </div>
-<ul id="listeProduits"></ul>
+
+<table id="tableauProduits">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Quantité</th>
+      <th>Prix d'achat</th>
+      <th>Prix de vente</th>
+      <th>Bénéfice</th>
+    </tr>
+  </thead>
+  <tbody id="listeProduits"></tbody>
+</table>
 
   <script src="script_stock.js"></script>
 </body>

@@ -47,16 +47,13 @@ button {
 button:hover {
   background-color: #2980b9;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-  max-width: 500px;
-  margin: auto;
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
 }
-li {
-  background: white;
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
