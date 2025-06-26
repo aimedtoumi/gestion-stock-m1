@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Caisse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Vente au Comptoir</h1>
+  <header>
+    <h2>Application de Gestion</h2>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="stock.html">Stock</a>
+      <a href="caisse.html">Caisse</a>
+      <a href="stats.html">Statistiques</a>
+    </nav>
+  </header>
+  
+<h1>Vente au Comptoir</h1>
+<div class="form">
   <select id="produitSelect"></select>
   <input type="number" id="qteVente" placeholder="Quantité">
   <button onclick="ajouterPanier()">Ajouter au panier</button>
-  <ul id="panier"></ul>
-  <p>Total : <span id="total">0</span> DA</p>
+</div>
+<ul id="panier"></ul>
+<p style="text-align:center;">Total : <span id="total">0</span> DA</p>
+
   <script src="script_caisse.js"></script>
 </body>
 </html>

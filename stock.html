@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Stock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Gestion de Stock</h1>
+  <header>
+    <h2>Application de Gestion</h2>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="stock.html">Stock</a>
+      <a href="caisse.html">Caisse</a>
+      <a href="stats.html">Statistiques</a>
+    </nav>
+  </header>
+  
+<h1>Stock des Produits</h1>
+<div class="form">
   <input type="text" id="nom" placeholder="Nom du produit">
   <input type="number" id="quantite" placeholder="Quantité">
-  <input type="number" id="prix" placeholder="Prix">
-  <button onclick="ajouterProduit()">Ajouter</button>
-  <ul id="listeProduits"></ul>
+  <input type="number" id="prix" placeholder="Prix (DA)">
+  <button onclick="ajouterProduit()">Ajouter Produit</button>
+</div>
+<ul id="listeProduits"></ul>
+
   <script src="script_stock.js"></script>
 </body>
 </html>
