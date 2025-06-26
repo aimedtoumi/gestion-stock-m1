@@ -1,33 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Stock</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">🏠 Accueil</a>
-    <a href="stock.html" class="active">📦 Stock</a>
-    <a href="caisse.html">💰 Caisse</a>
-    <a href="stats.html">📊 Stats</a>
-    <a href="login.html">🔒 Quitter</a>
-  </nav>
-  <main>
-    <h2>📦 Produits en stock</h2>
-    <input type="text" id="searchInput" placeholder="Rechercher..." oninput="afficherStock()">
-    <div>
-      <input type="text" id="nom" placeholder="Nom du produit">
-      <input type="number" id="quantite" placeholder="Quantité">
-      <button onclick="ajouterProduit()">Ajouter</button>
-    </div>
-    <table>
-      <thead><tr><th>Nom</th><th>Quantité</th><th>Actions</th></tr></thead>
-      <tbody id="stockTable"></tbody>
-    </table>
-  </main>
-  <script src="js/common.js"></script>
-  <script src="js/stock.js"></script>
+  <h1>Gestion de Stock</h1>
+  <input type="text" id="nom" placeholder="Nom du produit">
+  <input type="number" id="quantite" placeholder="Quantité">
+  <input type="number" id="prix" placeholder="Prix">
+  <button onclick="ajouterProduit()">Ajouter</button>
+  <ul id="listeProduits"></ul>
+  <script src="script_stock.js"></script>
 </body>
 </html>

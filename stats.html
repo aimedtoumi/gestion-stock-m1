@@ -1,27 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Statistiques</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">🏠 Accueil</a>
-    <a href="stock.html">📦 Stock</a>
-    <a href="caisse.html">💰 Caisse</a>
-    <a href="stats.html" class="active">📊 Stats</a>
-    <a href="login.html">🔒 Quitter</a>
-  </nav>
-  <main>
-    <h2>📊 Statistiques</h2>
-    <p><strong>Total produits :</strong> <span id="totalProduits">0</span></p>
-    <p><strong>Total stock :</strong> <span id="totalQuantite">0</span></p>
-    <canvas id="chart" width="400" height="200"></canvas>
-  </main>
-  <script src="js/common.js"></script>
-  <script src="js/stats.js"></script>
+  <h1>Statistiques</h1>
+  <div id="stats"></div>
+  <script src="script_stats.js"></script>
 </body>
 </html>
